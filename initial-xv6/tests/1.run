@@ -1,1 +1,1 @@
-cd src; ../../tester/run-xv6-command.exp CPUS=1 Makefile.test test_1 | grep XV6_TEST_OUTPUT; cd ..
+save_pwd=$PWD; cd $XV6_DIR; $OSTEP_PROJECTS_DIR/tester/run-xv6-command.exp CPUS=1 Makefile.test test_1 | grep XV6_TEST_OUTPUT; cd $save_pwd

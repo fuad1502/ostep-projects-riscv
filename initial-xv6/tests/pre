@@ -1,7 +1,8 @@
-../tester/xv6-edit-makefile.sh src/Makefile test_1,test_2 > src/Makefile.test
-cp -f tests/test_1.c src/user/test_1.c
-cp -f tests/test_2.c src/user/test_2.c
-cd src
+$OSTEP_PROJECTS_DIR/tester/xv6-edit-makefile.sh $XV6_DIR/Makefile test_1,test_2 > $XV6_DIR/Makefile.test
+cp -f tests/test_1.c $XV6_DIR/user/test_1.c
+cp -f tests/test_2.c $XV6_DIR/user/test_2.c
+save_pwd=$PWD
+cd $XV6_DIR
 make -f Makefile.test clean
 make -f Makefile.test
-cd ..
+cd $save_pwd
